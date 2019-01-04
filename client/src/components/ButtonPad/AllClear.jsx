@@ -14,7 +14,7 @@ class AllClear extends Component {
 
     render() {
         return (
-            <button id={"clear"} onClick={this.handleClick}>AC</button>
+            <button id={"clear"} onClick={this.handleClick} className={"btn-lg"}>AC</button>
         )
     }
 }

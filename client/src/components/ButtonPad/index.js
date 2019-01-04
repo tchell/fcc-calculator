@@ -9,7 +9,7 @@ import Decimal from "./Decimal.jsx";
 class ButtonPad extends Component {
     render() {
         return (
-            <div className={"container"} id={"button-pad"}>
+            <div id={"button-pad"}>
                 <AllClear/>
                 <ClearEntry/>
                 {(function numbers() {

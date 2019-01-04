@@ -15,7 +15,7 @@ class Number extends Component {
 
     render() {
         return (
-            <button className={"num"} id={this.props.name} onClick={this.handleClick}>{this.props.val}</button>
+            <button className={"num btn-sm"} id={this.props.name} onClick={this.handleClick}>{this.props.val}</button>
         )
     }
 }
