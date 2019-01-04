@@ -8,7 +8,7 @@ export default function rootReducer(state, action) {
                     ...state,
                     display: action.payload
                 };
-            } else if ( state.formula.search(/&\w*;$/) == -1 && calculate(state.formula) == state.display ) {
+            } else if ( state.formula.search(/&\w*;$/) === -1 && calculate(state.formula) === state.display ) {
                 return {
                     ...state,
                     display: action.payload,
@@ -56,7 +56,7 @@ export default function rootReducer(state, action) {
 
 function getFormula(formula, operator, num) {
     //console.log(formula, operator, num);
-    if (formula === '0' || formula.search(/&\w*;$/) == -1)            // first number
+    if (formula === '0' || formula.search(/&\w*;$/) === -1)            // first number
         return num + operator;
     else if (operator === num) {  // after equals pressed
         return formula + num
