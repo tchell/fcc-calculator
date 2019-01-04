@@ -15,7 +15,7 @@ class Decimal extends Component {
 
     render() {
         return (
-            <button id={"decimal"} onClick={this.handleClick}>.</button>
+            <button id={"decimal"} onClick={this.handleClick} className={"btn-sm"}>.</button>
         )
     }
 }

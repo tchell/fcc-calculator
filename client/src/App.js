@@ -8,7 +8,7 @@ import ButtonPad from "./components/ButtonPad";
 class App extends Component {
   render() {
     return (
-        <div className={"container"}>
+        <div id={"App"} className={"container"}>
             <Screen />
             <ButtonPad />
         </div>

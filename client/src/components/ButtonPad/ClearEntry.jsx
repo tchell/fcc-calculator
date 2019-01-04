@@ -14,7 +14,7 @@ class ClearEntry extends Component {
 
     render() {
         return (
-            <button id={"clear-entry"} onClick={this.handleClick}>CE</button>
+            <button id={"clear-entry"} onClick={this.handleClick} className={"btn-lg"}>CE</button>
         )
     }
 }

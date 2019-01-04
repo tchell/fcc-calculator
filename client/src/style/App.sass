@@ -3,28 +3,34 @@
   font-family: digital-7
   src: url("../fonts/digital-7 (mono).ttf")
 
-#root
+body
+  background-color: grey
+#App
   font-family: digital-7, "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace
   width: 320px
   position: fixed
   top: 25%
   left: 50%
   transform: translate(-50%, -50%)
+  background-color: whitesmoke
+  padding: 5px
+  border-radius: 10px
 
-.btn
-  margin: 1px
-
-.container
-  margin: auto auto
-  padding: 0
 
 #screen
-  text-align: right
-  padding-right: 5px
   background-color: #999966
+  border-radius: 5px
+  #formula
+    font-size: x-large
+    padding-left: 5px
   #display
-    font-size: 1.2em
+    text-align: right
+    padding-right: 5px
+    font-size: xx-large
     font-weight: bold
+
+.btn-sm, .btn-lg
+  font-size: xx-large
 #button-pad
   display: grid
   grid-template-areas: "clear-all clear-all clear-entry clear-entry" "seven eight nine divide" "four five six multiply" "one two three subtract" "zero decimal equals plus"
