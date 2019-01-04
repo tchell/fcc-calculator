@@ -3,11 +3,17 @@ import {NUM_ADD, OP_ADD, DISP_CLEAR, CALCULATE, ALL_CLEAR, DEC_ADD} from "../act
 export default function rootReducer(state, action) {
     switch(action.type) {
         case NUM_ADD:
-            if (state.display === '0' || state.formula === '0') {
+            if (state.display === '0') {
                 return {
                     ...state,
                     display: action.payload
                 };
+            } else if ( state.formula.search(/&\w*;$/) == -1 && calculate(state.formula) == state.display ) {
+                return {
+                    ...state,
+                    display: action.payload,
+                    formula: '0'
+                }
             } else {
                 return {
                     ...state,
@@ -41,7 +47,6 @@ export default function rootReducer(state, action) {
             let ans = calculate(state.formula);
             return {
                 ...state,
-                formula: '0',
                 display: ans
             };
         default:
@@ -51,9 +56,9 @@ export default function rootReducer(state, action) {
 
 function getFormula(formula, operator, num) {
     //console.log(formula, operator, num);
-    if (formula === '0')            // first number
+    if (formula === '0' || formula.search(/&\w*;$/) == -1)            // first number
         return num + operator;
-    else if (operator === num) {  // after equals
+    else if (operator === num) {  // after equals pressed
         return formula + num
     }
     else if (num === '0') {         // to operators in a row
