@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { dispClear } from "../actions/displayActions";
+import { allClear } from "../../actions/actions";
 
-class ClearEntry extends Component {
+class AllClear extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -14,7 +14,7 @@ class ClearEntry extends Component {
 
     render() {
         return (
-            <button id={"clear"} onClick={this.handleClick}>CE</button>
+            <button id={"clear"} onClick={this.handleClick}>AC</button>
         )
     }
 }
@@ -28,9 +28,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         clear: () => {
-            dispatch(dispClear())
+            dispatch(allClear())
         }
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ClearEntry);
+export default connect(mapStateToProps, mapDispatchToProps)(AllClear);

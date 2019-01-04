@@ -15,7 +15,7 @@ Display.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-    display: state.display.display
+    display: state.display
 });
 
 export default connect(mapStateToProps)(Display);

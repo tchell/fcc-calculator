@@ -1,7 +1,10 @@
 import { createStore } from "redux";
-import rootReducer from './reducers';
+import rootReducer from './reducers/reducer';
 
-const initialState = {};
+const initialState = {
+    formula: '0',
+    display: '0'
+};
 
 const store = createStore(
     rootReducer,

@@ -3,3 +3,5 @@
 node_modules/
 
 live.js
+
+*.zip

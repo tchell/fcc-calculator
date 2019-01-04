@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { numAdd } from '../actions/displayActions';
+import { dispClear } from "../../actions/actions";
 
-class Number extends Component {
+class ClearEntry extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        this.props.addNum(this.props.val);
+        this.props.clear();
     }
 
     render() {
         return (
-            <button id={this.props.name} onClick={this.handleClick}>{this.props.val}</button>
+            <button id={"clear-entry"} onClick={this.handleClick}>CE</button>
         )
     }
 }
@@ -27,10 +27,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addNum: (num) => {
-            dispatch(numAdd(num));
+        clear: () => {
+            dispatch(dispClear())
         }
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Number);
+export default connect(mapStateToProps, mapDispatchToProps)(ClearEntry);
