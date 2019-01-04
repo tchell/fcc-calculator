@@ -37,11 +37,12 @@ export default function rootReducer(state, action) {
                 display: '0',
             };
         case CALCULATE:
-            console.log(convertTagToStr(state.formula));
+            //console.log(convertTagToStr(state.formula));
+            let ans = calculate(state.formula);
             return {
                 ...state,
                 formula: '0',
-                display: String(eval(convertTagToStr(state.formula)))
+                display: ans
             };
         default:
             return state
@@ -62,7 +63,13 @@ function getFormula(formula, operator, num) {
         return formula + num + operator;
 }
 
+function calculate(formula) {
+    return String(eval(convertTagToStr(formula)));
+}
+
 function convertTagToStr(str) {
+    // Find all HTML operators and replace them with text
+    // eg. &divide; -> /
     return str.replace(/&\w*;/g, (match) => {
         switch (match) {
             case "&divide;":
