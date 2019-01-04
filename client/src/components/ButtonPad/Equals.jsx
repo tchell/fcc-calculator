@@ -14,7 +14,7 @@ class Equals extends Component {
     }
     render() {
         return (
-            <button id={this.props.name} onClick={this.handleClick} dangerouslySetInnerHTML={{__html: this.props.char}}/>
+            <button id={this.props.name} onClick={this.handleClick} dangerouslySetInnerHTML={{__html: this.props.char}} className={"btn-sm"}/>
         )
     }
 }
