@@ -10,7 +10,7 @@ ReactDOM.render(
     <Provider store={store}>
         <App />
         <footer>
-            by <a href="https://github.com/tchell" target="_blank">Tanner Chell</a> | <a href="https://github.com/tchell/fcc-calculator" target="_blank">view the code</a>
+            by <a href="https://github.com/tchell" target="_blank" rel="noopener noreferrer">Tanner Chell</a> | <a href="https://github.com/tchell/fcc-calculator" target="_blank" rel="noopener noreferrer">view the code</a>
         </footer>
     </Provider>, document.getElementById('root'));
 
