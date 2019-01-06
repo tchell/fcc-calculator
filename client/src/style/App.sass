@@ -11,17 +11,25 @@ $black: #171D29
 
 body
   background-color: $black
+#root
+  position: fixed
+  top: 33%
+  left: 50%
+  transform: translate(-50%, -50%)
 #App
   font-family: digital-7, "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace
   color: $black
   width: 320px
-  position: fixed
-  top: 25%
-  left: 50%
-  transform: translate(-50%, -50%)
   background-color: $black + #444
   padding: 5px
   border-radius: 10px
+
+footer
+  position: absolute
+  color: $white
+  text-align: center
+  width: 100%
+  margin-top: 10px
 
 #screen
   background-color: $color-highlight
